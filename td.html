@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truth or Dare</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Truth or Dare</h1>
+  <button onclick="getTruth()">Truth</button>
+  <button onclick="getDare()">Dare</button>
+  <p id="result"></p>
+</div>
+
+<script>
+const truths = [
+  "What is your crush name?",
+  "What is the most embarrassing thing that has happened to you?",
+  "How many bf have till now?",
+  // Add more truth questions as needed
+];
+
+const dares = [
+  "Sing a song which I siad to sing for one minute.",
+  "Propose any male friend of yours",
+  "Make a funny reel and send to me",
+  // Add more dare tasks as needed
+];
+
+function getTruth() {
+  const randomIndex = Math.floor(Math.random() * truths.length);
+  const truth = truths[randomIndex];
+  document.getElementById("result").innerText = "Truth: " + truth;
+}
+
+function getDare() {
+  const randomIndex = Math.floor(Math.random() * dares.length);
+  const dare = dares[randomIndex];
+  document.getElementById("result").innerText = "Dare: " + dare;
+}
+</script>
+
+</body>
+</html>
